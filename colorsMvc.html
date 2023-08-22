@@ -14,8 +14,6 @@
 </head>
 
 <body>
-    <h1>Pause til 11:00</h1>
-    
     <div id="app"></div>
 
     <script>
@@ -29,12 +27,19 @@
         function updateView(){
             document.getElementById('app').innerHTML = /*HTML*/`
                 <div id="mainDiv" style="background-color: rgb(${red}, ${green}, ${blue});"></div>
-                <button onclick="changeColor(5, 0, 0)">Mer rødt</button>            
+                <button onclick="changeColor(5, 0, 0)">Mer rødt</button>          
                 <button onclick="changeColor(-5, 0, 0)">Mindre rødt</button>            
+                ${red}<br/>
+
                 <button onclick="changeColor(0, 5, 0)">Mer grønt</button>            
                 <button onclick="changeColor(0, -5, 0)">Mindre grønt</button>            
+                ${green}<br/>
+
                 <button onclick="changeColor(0, 0, 5)">Mer blått</button>            
                 <button onclick="changeColor(0, 0, -5)">Mindre blått</button>            
+                ${blue}<br/>
+                
+                <br/>                
                 <button onclick="changeColor(5, 5, 5)">Lysere</button>            
                 <button onclick="changeColor(-5, -5, -5)">Mørkere</button>            
             `;
